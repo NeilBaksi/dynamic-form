@@ -1,0 +1,201 @@
+[
+  {
+    "id": "heading1",
+    "component": "Typography",
+    "props": {
+      "variant": "h5",
+      "children": "Account Complaint Form",
+      "sx": { "mb": 2 }
+    }
+  },
+  {
+    "id": "divider1",
+    "component": "Divider",
+    "props": { "sx": { "my": 2 } }
+  },
+  {
+    "id": "firstName",
+    "component": "TextField",
+    "props": {
+      "name": "firstName",
+      "label": "First Name",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true,
+      "inputProps": { "minLength": 2 }
+    },
+    "step": 1
+  },
+  {
+    "id": "lastName",
+    "component": "TextField",
+    "props": {
+      "name": "lastName",
+      "label": "Last Name",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true
+    },
+    "step": 1
+  },
+  {
+    "id": "contact",
+    "component": "Checkbox",
+    "props": {
+      "name": "contact",
+      "label": "Contact me",
+      "color": "primary"
+    },
+    "step": 1
+  },
+  {
+    "id": "email",
+    "component": "TextField",
+    "props": {
+      "name": "email",
+      "label": "Email",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true,
+      "type": "email"
+    },
+    "showIf": { "field": "contact", "equals": true },
+    "step": 1
+  },
+  {
+    "id": "divider2",
+    "component": "Divider",
+    "props": { "sx": { "my": 2 } }
+  },
+  {
+    "id": "heading1",
+    "component": "Typography",
+    "props": {
+      "variant": "h5",
+      "children": "More Details",
+      "sx": { "mb": 2 }
+    },
+    "step": 2
+  },
+  {
+    "id": "divider1",
+    "component": "Divider",
+    "props": { "sx": { "my": 2 } },
+    "step": 2
+  },
+  {
+    "id": "address",
+    "component": "TextField",
+    "props": {
+      "name": "address",
+      "label": "Address",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true
+    },
+    "step": 2
+  },
+  {
+    "id": "phone",
+    "component": "TextField",
+    "props": {
+      "name": "phone",
+      "label": "Phone Number",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true,
+      "inputProps": {
+        "maxLength": 10,
+        "inputMode": "numeric",
+        "pattern": "[0-9]*"
+      }
+    },
+    "step": 2
+  },
+  {
+    "id": "divider3",
+    "component": "Divider",
+    "props": { "sx": { "my": 2 } }
+  },
+  {
+    "id": "heading1",
+    "component": "Typography",
+    "props": {
+      "variant": "h5",
+      "children": "Account Details",
+      "sx": { "mb": 2 }
+    },
+    "step": 3
+  },
+  {
+    "id": "divider1",
+    "component": "Divider",
+    "props": { "sx": { "my": 2 } },
+    "step": 3
+  },
+  {
+    "id": "accountNo",
+    "component": "TextField",
+    "props": {
+      "name": "accountNo",
+      "label": "Account Number",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true,
+      "inputProps": {
+        "maxLength": 10,
+        "inputMode": "numeric",
+        "pattern": "[0-9]*"
+      }
+    },
+    "step": 3
+  },
+  {
+    "id": "accountType",
+    "component": "TextField",
+    "props": {
+      "name": "accountType",
+      "label": "Account Type",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true
+    },
+    "step": 3
+  },
+  {
+    "id": "ownerOfAccount",
+    "component": "Checkbox",
+    "props": {
+      "name": "ownerOfAccount",
+      "label": "I am the owner of the account",
+      "color": "primary"
+    },
+    "step": 3
+  },
+  {
+    "id": "complaint",
+    "component": "TextField",
+    "props": {
+      "name": "complaint",
+      "label": "Complaint",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true
+    },
+    "showIf": { "field": "ownerOfAccount", "equals": true },
+    "step": 3
+  },
+  {
+    "id": "documentation",
+    "component": "TextField",
+    "props": {
+      "name": "documentation",
+      "label": "Documentation",
+      "variant": "outlined",
+      "fullWidth": true,
+      "required": true
+    },
+    "showIf": { "field": "ownerOfAccount", "equals": false },
+    "step": 3
+  }
+]
